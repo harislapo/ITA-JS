@@ -28,13 +28,29 @@ document.write('<br/>');
 // console.log(text);
 // console.log(typeof(text));
 
-var a = true;
-var b = false;
+// var a = true;
+// var b = false;
 
-var c = a && b;
-var d = a || b;
+// var c = a && b;
+// var d = a || b;
 
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+var a = 6;
+var b = 6;
+
+function isEqual(number1, number2) {
+    document.write('Entered numbers are: ' + number1 + ' and ' + number2);
+    document.write('<br>')
+
+    if (number1 === number2) {
+        document.write('The numbers are equal');
+    }
+    else
+        document.write('The numbers are not equal');
+}
+
+isEqual(a, b);
