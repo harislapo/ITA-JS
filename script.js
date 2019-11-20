@@ -55,4 +55,4 @@ function isEqual(number1, number2) {
 
 isEqual(a, b);
 
-sagdashdgas
+//
