@@ -24,6 +24,17 @@ document.write('<br/>');
 // console.log("Drugi broj: " + number2);
 // console.log("Rezultat je: " + result);
 
-var text = "Today is a good day";
-console.log(text);
-console.log(typeof(text));
+// var text = "Today is a good day";
+// console.log(text);
+// console.log(typeof(text));
+
+var a = true;
+var b = false;
+
+var c = a && b;
+var d = a || b;
+
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
