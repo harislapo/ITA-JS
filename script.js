@@ -32,23 +32,37 @@
 // console.log(c);
 // console.log(d);
 
-var a = 6;
-var b = 6;
+// var a = 6;
+// var b = 6;
 
-function isEqual(number1, number2) {
-    alert('Entered numbers are: ' + number1 + ' and ' + number2);
-    confirm('Find out if entered numbers are equal?');
-    document.write('Entered numbers are: ' + number1 + ' and ' + number2);
-    document.write('<br>')
+// var number1 = prompt('Enter first number: ');
+// var number2 = prompt('Enter second number: ');
 
-    if (number1 === number2) {
-        alert('The numbers are equal');
-        document.write('The numbers are equal');
+// function isEqual(x, y) {
+//     alert('Entered numbers are: ' + number1 + ' and ' + number2);
+//     confirm('Find out if entered numbers are equal?');
+//     document.write('Entered numbers are: ' + number1 + ' and ' + number2);
+//     document.write('<br>')
 
-    }
-    else
-        alert('The numbers are not equal');
-    document.write('The numbers are not equal');
+//     if (number1 === number2) {
+//         alert('The numbers are equal');
+//         document.write('The numbers are equal');
+//     }
+//     else {
+//         alert('The numbers are not equal');
+//         document.write('The numbers are not equal');
+//     }
+// }
+
+// isEqual(number1, number2);  
+
+// ----- control flow ------
+
+var number = prompt('Please enter number: ');
+
+if (number > 5) {
+    alert('Entered number is bigger than 5');
 }
-
-isEqual(50, 2);
+else {
+    alert('Entered number is smaller than 5');
+}
