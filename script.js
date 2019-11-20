@@ -1,10 +1,3 @@
-document.write("Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatum dignissimos distinctio inventore quasi nostrum unde dicta harum, eius repudiandae natus perferendis rem at laborum voluptatem, quo explicabo voluptas pariatur!");
-document.write('<br/>');
-document.write('<br/>');
-document.write('<br/>');
-document.write('<br/>');
-
-
 // console.log("ovo je ispis na konzolu")
 // console.error("ovo je ispis na konzolu")
 
@@ -43,16 +36,19 @@ var a = 6;
 var b = 6;
 
 function isEqual(number1, number2) {
+    alert('Entered numbers are: ' + number1 + ' and ' + number2);
+    confirm('Find out if entered numbers are equal?');
     document.write('Entered numbers are: ' + number1 + ' and ' + number2);
     document.write('<br>')
 
     if (number1 === number2) {
+        alert('The numbers are equal');
         document.write('The numbers are equal');
+
     }
     else
-        document.write('The numbers are not equal');
+        alert('The numbers are not equal');
+    document.write('The numbers are not equal');
 }
 
-isEqual(a, b);
-
-//
+isEqual(50, 2);
