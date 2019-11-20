@@ -74,14 +74,13 @@
 
 // ----- zadatak -----
 
-var number = prompt('Please enter number: ');
-
-if (number > 5) {
-    alert('Entered number is bigger than 5');
-}
-else if (number == 5) {
-    alert('Entered number is equal to 5');
-}
-else {
-    alert('Entered number is smaller than 5');
-}
+// var number = prompt('Please enter number: ');
+// if (number > 5) {
+//     alert('Entered number is bigger than 5');
+// }
+// else if (number == 5) {
+//     alert('Entered number is equal to 5');
+// }
+// else {
+//     alert('Entered number is smaller than 5');
+// }
