@@ -144,8 +144,6 @@ alert(question ? 'Good day' : 'Good evening');
 */
 
 
-
-
 // --- zadatak ---
 
 
@@ -237,4 +235,77 @@ function hello(currentTime){
 hello(date2); 
 */
 
+// --- zadatak ---
+
+/* 
+var enteredAmount = parseFloat(prompt("Please enter amount of money in KM's you want to exchange: "));
+var enteredCurrency = prompt("To currency: (EUR/HRK/GBP/USD)");
+
+
+switch(enteredCurrency) {
+    case 'EUR': alert(result = enteredAmount * 0.51);
+    break;
+
+    case 'HRK': alert(result = enteredAmount * 3.81);
+    break;
+
+    case 'GBP': alert(result = enteredAmount * 0.44);
+    break;
+
+    case 'USD': alert(result = enteredAmount * 0.56);
+    break;
+}     
+*/
+
+
+// --- NIZOVI ----
+
+/* 
+var niz = [1, 2, 3, 'super skola', [1, 9, 9, ['treci niz u nizu']], 'gađanje css-om'];
+niz[4].push(true);
+var drugiClan = niz[4][3];
+console.log(niz);
+console.log(drugiClan);
+ */
+/* 
+var niz2 = [1, 'super niz', 6, 8];
+var index = niz2.indexOf('super niz');
+ */
+/* console.log(index);
+console.log(niz2.includes(3));
+console.log(niz2.pop());
+console.log(niz2); */
+
+/* 
+niz2.splice(index, 1);
+console.log(index);
+console.log(niz2);
+*/
+
+var kurs = {
+    EUR: 1.95,
+    HRK: 4,
+    GBP: 2.3,
+    USD: 1.6
+}
+
+var valute = Object.keys(kurs);
+
+var iznos = parseInt(prompt("Please enter amount of money in KM's you want to exchange: "));
+var enteredCurrency = prompt("To currency: (EUR/HRK/GBP/USD)");
+
+if (valute.includes(enteredCurrency)) {
+    var kursnaVrijednost = kurs[enteredCurrency];
+    var res = iznos*kursnaVrijednost;
+    alert('Vrijednost je: ' +res+' '+enteredCurrency);
+}
+else alert('Valuta nije podrzana');
+
+
+
+
+
+
+
+//overapi.com
 
