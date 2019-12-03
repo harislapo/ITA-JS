@@ -282,6 +282,8 @@ console.log(index);
 console.log(niz2);
 */
 
+/* 
+
 var kurs = {
     EUR: 1.95,
     HRK: 4,
@@ -296,10 +298,79 @@ var enteredCurrency = prompt("To currency: (EUR/HRK/GBP/USD)");
 
 if (valute.includes(enteredCurrency)) {
     var kursnaVrijednost = kurs[enteredCurrency];
-    var res = iznos*kursnaVrijednost;
+    var res = iznos/kursnaVrijednost;
     alert('Vrijednost je: ' +res+' '+enteredCurrency);
 }
 else alert('Valuta nije podrzana');
+
+
+ */
+
+/* 
+var arr = [];
+
+var person = {
+    name: 'Haris',
+    surname: 'Lapo',
+    age: '23',
+    address: {}
+};
+
+arr.push(person);
+
+console.log(person.name);
+console.log(arr);
+
+ */
+
+/* 
+var enteredNumbers = (prompt('Enter numbers to add: '));
+console.log(enteredNumbers);
+var arr = enteredNumbers.split(',')
+console.log(arr);
+
+function saberi(arr) {
+    var res = 0;
+    for (var i = 0; i < arr.length; i++) {
+        res += parseInt(arr[i]);
+    }
+    return res;
+}
+var rezultat = saberi(arr);
+
+console.log(rezultat);
+
+ */
+/* 
+var arr1 = [1, 2, 3, 4, 5, 6];
+var arr2 = [7, 8, 9, 10, 11, 12];
+
+function arrayAdder(a1, a2) {
+
+    var result = [];
+
+    for (var i = 0; i < a2.length; i++) {
+
+        result[i] = a1[i] + a2[i];
+    }
+    return result;
+
+}
+
+var rezultat = arrayAdder(arr1, arr2);
+console.log(rezultat);
+ */
+
+
+var str = 'RIMAC';
+function abeceda(st1) {
+    return st1.split('').sort().join(' ');
+}
+
+var rezultat = abeceda(str);
+console.log(rezultat);
+
+
 
 
 
@@ -308,4 +379,3 @@ else alert('Valuta nije podrzana');
 
 
 //overapi.com
-
