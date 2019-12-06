@@ -361,7 +361,7 @@ var rezultat = arrayAdder(arr1, arr2);
 console.log(rezultat);
  */
 
-
+/* 
 var str = 'RIMAC';
 function abeceda(st1) {
     return st1.split('').sort().join(' ');
@@ -370,10 +370,57 @@ function abeceda(st1) {
 var rezultat = abeceda(str);
 console.log(rezultat);
 
+ */
+
+var arr = [1, 4, 56, -34, -9, 10, 4, 1, 67, -2];
+console.log("The numbers are:  " + arr);
+/* 
+function positiveNumbers(arr1) {
+    var result = [];
+    for (var i = 0; i < arr1.length; i++) {
+        if (arr[i] > 0) {
+            result.push(arr1[i]);
+        }
+    }   
+    return result;
+}
+
+function negativeNumbers(arr2) {
+    var result = [];
+    for (var i = 0; i < arr2.length; i++) {
+        if (arr[i] < 0) {
+            result.push(arr2[i]);
+        }
+    }
+    return result;
+}
+
+var rezultat1 = positiveNumbers(arr);
+console.log(rezultat1);
+
+var rezultat2 = negativeNumbers(arr);
+console.log(rezultat2);
+ */
 
 
+function dupli(niz) {
+    
+    var duplicate = [];
+    var original = [];
 
+    for (var i = 0; i < niz.length; i++) {
+        if (!original.includes(niz[i])) {
+            original.push(niz[i])
+        }
+        else {
+            duplicate.push(niz[i]);
+        }
+    }
+    return {d: duplicate, o: original};
+}
 
+var res = dupli(arr);
+console.log(res);
 
 
 
