@@ -372,8 +372,9 @@ console.log(rezultat);
 
  */
 
-var arr = [1, 4, 56, -34, -9, 10, 4, 1, 67, -2];
-console.log("The numbers are:  " + arr);
+/* var arr = [1, 4, 56, -34, -9, 10, 4, 1, 67, -2];
+console.log("The numbers are:  " + arr); 
+*/
 /* 
 function positiveNumbers(arr1) {
     var result = [];
@@ -403,7 +404,7 @@ console.log(rezultat2);
  */
 
 
-function dupli(niz) {
+/* function dupli(niz) {
     
     var duplicate = [];
     var original = [];
@@ -422,7 +423,38 @@ function dupli(niz) {
 var res = dupli(arr);
 console.log(res);
 
+ */
+/* 
+var s1 = 'Hello World ';
+var s2 = 'From JavaScript';
+var s3 = s1.concat(s2);
 
+
+
+function colorizedString(str) {
+
+    for (var i = 0; i < str.length; i++) {
+        if (i % 2 == 0) {
+            document.write('<span style = "color: red">' + str[i] + '</span>');
+        }
+        else {
+            document.write('<span>' + str[i] + '</span>');
+        }
+    }
+} 
+
+colorizedString(s3);
+ */
+
+
+var arr = [245, 56, 67, 92, 345, 'bruca', 'braca', 'bruda', 'brada', false, true, 'teufik', 'shchenik'];
+
+function randomItemArray(a) {
+    var index = Math.floor( Math.random() * a.length);
+    return a[index];
+}
+var result = randomItemArray(arr);
+console.log(result);
 
 
 //overapi.com
