@@ -446,7 +446,7 @@ function colorizedString(str) {
 colorizedString(s3);
  */
 
-
+/* 
 var arr = [245, 56, 67, 92, 345, 'bruca', 'braca', 'bruda', 'brada', false, true, 'teufik', 'shchenik'];
 
 function randomItemArray(a) {
@@ -455,6 +455,64 @@ function randomItemArray(a) {
 }
 var result = randomItemArray(arr);
 console.log(result);
+ */
+
+/* 
+var bubanj = [12, 334, 35, 123, 67, 87];
+
+while (true) {
+    var check = parseInt(prompt('Enter number to play or enter 0 to exit'));
+    if (check == 0) {
+        break;
+    }
+    else if (bubanj.includes(check)) {
+        alert('Congrats, you won!');
+    }
+    else {
+        alert('Sorry, you lost.');
+    }
+} */
+
+/* var height = parseInt(prompt('Enter height: '));
+var width = parseInt(prompt('Enter width: '));
+
+function printMatrix(h, w) {
+
+    for (var i = 0; i < h; i++) {
+        for (var j = 0; j < w; j++) {
+            document.write('#');
+            
+        }
+        document.write('<br>');
+    }
+
+}
+
+
+
+printMatrix(height, width); */
+
+
+var height = parseInt(prompt('Enter height: '));
+var width = parseInt(prompt('Enter width: '));
+var points = [3, 4, 2];
+
+function printMatrix(h, w) {
+
+    for (var i = 0; i < h; i++) {
+        for (var j = 0; j < w; j++) {
+            if (points.includes(i) && points.includes(j)) {
+                document.write('0');
+            }
+            else 
+            document.write('#');
+        }
+        document.write('<br>');
+    }
+
+}
+
+printMatrix(height, width);
 
 
 //overapi.com
