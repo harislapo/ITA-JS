@@ -543,6 +543,7 @@ var nizDivova = document.getElementsByClassName('konzola');
 console.log(nizDivova);
  */
 
+/* 
 var language = 'bs_bs';
 var locales = {
     'en_us': {
@@ -573,6 +574,42 @@ function translatePage(lang) {
 }
 
 translatePage(language);
+
+ */
+
+/* 
+var div = document.createElement('div');
+div.innerHTML = 'Ovo je div kreiran iz JSa';
+
+var h2 = document.createElement('h2');
+h2.innerHTML = 'Ovo je naslov drugog nivoa';
+
+document.body.appendChild(div);
+div.appendChild(h2);
+
+ */
+
+var images = ['https://images.unsplash.com/photo-1535498730771-e735b998cd64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
+    'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
+    'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'];
+
+var image = document.createElement('img');
+document.body.appendChild(image);
+image.style.width = 30;
+var counter = 0;
+
+setInterval(function () {
+    image.src = images[counter];
+    counter++;    
+    if(counter >= images.length){
+        counter=0;
+    }  
+
+}, 1000);
+
+
+
+
 
 
 
