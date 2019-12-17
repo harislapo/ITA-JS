@@ -495,24 +495,26 @@ printMatrix(height, width); */
 
 var height = parseInt(prompt('Enter height: '));
 var width = parseInt(prompt('Enter width: '));
-var points = [3, 4, 2];
+var points = [2, 3, 4];
 
-function printMatrix(h, w) {
+function printMatrix(h, w, z) {
 
     for (var i = 0; i < h; i++) {
         for (var j = 0; j < w; j++) {
-            if (points.includes(i) && points.includes(j)) {
-                document.write('0');
+            var exists = false;
+            for (var p = 0; p < z.length; p++) {
+                if (z[p] === i && z[p] === j) {
+                    exists = true;
+                    document.write('<span style ="font-size:18px;">0</span>');
+                }
             }
-            else 
-            document.write('#');
+            if (!exists)
+                document.write('<span style ="font-size:18px;">#</span>');
         }
-        document.write('<br>');
+        document.write('</br>');
     }
-
 }
-
-printMatrix(height, width);
+    printMatrix(height, width, points);
 
 
 //overapi.com
