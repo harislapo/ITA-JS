@@ -493,11 +493,12 @@ function printMatrix(h, w) {
 printMatrix(height, width); */
 
 
-var height = parseInt(prompt('Enter height: '));
+/* var height = parseInt(prompt('Enter height: '));
 var width = parseInt(prompt('Enter width: '));
 var points = [2, 3, 4];
+var points2d = [[2, 3],[6, 3],[3, 1]]; */
 
-function printMatrix(h, w, z) {
+/* function printMatrix(h, w, z) {
 
     for (var i = 0; i < h; i++) {
         for (var j = 0; j < w; j++) {
@@ -514,7 +515,73 @@ function printMatrix(h, w, z) {
         document.write('</br>');
     }
 }
-    printMatrix(height, width, points);
+ */
+/* 
+function printMatrix(h, w, z) {
+
+    for (var i = 0; i < h; i++) {
+        for (var j = 0; j < w; j++) {
+            var exists = false;
+            for (var p = 0; p < z.length; p++) {
+                if (z[p][0] === i && z[p][1] === j) {
+                    exists = true;
+                    document.write('<span style ="font-size:18px;">0</span>');
+                }
+            }
+            if (!exists)
+                document.write('<span style ="font-size:18px;">#</span>');
+        }
+        document.write('</br>');
+    }
+}
+printMatrix(height, width, points2d);
+ */
+
+/* 
+var nizDivova = document.getElementsByClassName('konzola');
+
+console.log(nizDivova);
+ */
+
+var language = 'bs_bs';
+var locales = {
+    'en_us': {
+        hello: "Hello",
+        welcome: "Welcome to our page",
+        how_are_you: "How are you today?",
+        msg: "JS"
+    },
+    'sr_rs': {
+        hello: "Dobar dan",
+        welcome: "Dobro dosli na nasu stranicu",
+        how_are_you: "Kako ste danas?",
+        msg: "DzEJES"
+    },
+    'bs_bs': {
+        hello: "Dobar dan bosanski",
+        welcome: "Dobro dosli na nasu stranicu",
+        how_are_you: "Kako ste danas?",
+        msg: "DejEs"
+    }
+};
+
+function translatePage(lang) {
+    var nizDivova = document.getElementsByTagName('div');
+    for(var i=0; i<nizDivova.length; i++){
+        nizDivova[i].innerHTML = locales[lang][nizDivova[i].innerHTML];
+    }
+}
+
+translatePage(language);
+
+
+
+
+
+
+
+
+
 
 
 //overapi.com
