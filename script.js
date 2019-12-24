@@ -588,7 +588,7 @@ document.body.appendChild(div);
 div.appendChild(h2);
 
  */
-
+/* 
 var images = ['https://images.unsplash.com/photo-1535498730771-e735b998cd64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
     'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
     'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'];
@@ -606,12 +606,83 @@ setInterval(function () {
     }  
 
 }, 1000);
+ */
+
+var data = [
+    {
+        id: 1,
+        name: 'BATMAN',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
+        image: 'https://www.stickpng.com/assets/images/580b57fbd9996e24bc43c01d.png'
+    },
+    {
+        id: 2,
+        name: 'SUPERMAN',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
+        image: 'https://purepng.com/public/uploads/large/purepng.com-supermansupermanfictional-superherocomic-booksdc-comicscharacterjerry-siegelson-of-kryptonaction-comicsman-of-steel-1701528657757hwozy.png'
+    },
+    {
+        id: 3,
+        name: 'SPIDERMAN',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
+        image: 'https://i.pinimg.com/originals/c1/0d/ee/c10dee09355e81e8e69c0580b4e05f38.png'
+    }
+]
+
+var table = document.createElement('table');
+document.body.appendChild(table);
+
+var tr = document.createElement('tr');
+table.border = 1;
+table.style.margin = 'auto';
+table.appendChild(tr);
+
+var th_id = document.createElement('th');
+th_id.innerHTML = '#';
+tr.appendChild(th_id);
+
+var th_name = document.createElement('th');
+th_name.innerHTML = 'Name';
+tr.appendChild(th_name);
+
+var th_desc = document.createElement('th');
+th_desc.innerHTML = 'Description';
+tr.appendChild(th_desc);
+
+var th_image = document.createElement('th');
+th_image.innerHTML = 'Image';
+tr.appendChild(th_image);
 
 
+for (var i = 0; i < data.length; i++) {
+    var tr1 = document.createElement('tr');
+
+    tr1.style.background = i % 2 == 0 ? 'lightyellow':'whitesmoke';
+    
+    table.appendChild(tr1);
+
+    var td_id = document.createElement('td');
+    td_id.innerHTML = data[i].id;
+    tr1.appendChild(td_id);
+
+    var td_name = document.createElement('td');
+    td_name.innerHTML = data[i].name;
+    tr1.appendChild(td_name);
+
+    var td_desc = document.createElement('td');
+    td_desc.innerHTML = data[i].description;
+    tr1.appendChild(td_desc);
+
+    var td_image = document.createElement('td');
+    var img = document.createElement('img');
+    img.src = data[i].image;
+    img.width = 130;
+    img.height = 160;
+    td_image.appendChild(img);
+    tr1.appendChild(td_image);
 
 
-
-
+}
 
 
 
