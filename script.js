@@ -608,6 +608,7 @@ setInterval(function () {
 }, 1000);
  */
 
+/* 
 var data = [
     {
         id: 1,
@@ -658,7 +659,7 @@ for (var i = 0; i < data.length; i++) {
     var tr1 = document.createElement('tr');
 
     tr1.style.background = i % 2 == 0 ? 'lightyellow':'whitesmoke';
-    
+
     table.appendChild(tr1);
 
     var td_id = document.createElement('td');
@@ -683,6 +684,64 @@ for (var i = 0; i < data.length; i++) {
 
 
 }
+ */
+
+//Napisati funkciju koja  izbacuje element iz niza a ako nema ispisuje da nije pronadjen
+var array = [5, 'It Akademija', 12, 'Sarajevo', true, 'Student', 122, 'PC', -23, new Date().toLocaleDateString()];
+/* 
+function removeFromArr(inp) {
+    console.log(array);
+    var index = array.indexOf(inp);
+    if (index != -1) {
+        array.splice(index, 1);
+        console.log(array);
+    }
+    else {
+        console.log('Element not found');
+    }
+}
+removeFromArr(12); 
+*/
+
+/* 
+// Napisati funkciju koja iz niza izvlaci samo brojeve i smjesta ih u drugi novi niz
+function numbersOnly() {
+    console.log(array);
+    var nizBrojeva = [];
+    for (var i = 0; i < array.length; i++) {
+        if (typeof (array[i]) == 'number') {
+            nizBrojeva.push(array[i]);
+        }
+    }
+    return nizBrojeva;
+}
+var res = numbersOnly();
+console.log(res);
+*/
+
+
+
+function printMatrix() {
+
+    for (var i = 0; i < 5; i++) {
+        for (var j = 5; j > 0; j--) {
+            document.write('#');
+        }
+        document.write('<br>');
+    }
+
+}
+
+printMatrix();
+
+
+
+
+
+
+
+
+
 
 
 
