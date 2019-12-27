@@ -686,9 +686,9 @@ for (var i = 0; i < data.length; i++) {
 }
  */
 
+
 //Napisati funkciju koja  izbacuje element iz niza a ako nema ispisuje da nije pronadjen
-var array = [5, 'It Akademija', 12, 'Sarajevo', true, 'Student', 122, 'PC', -23, new Date().toLocaleDateString()];
-/* 
+/* var array = [5, 'It Akademija', 12, 'Sarajevo', true, 'Student', 122, 'PC', -23, new Date().toLocaleDateString()];
 function removeFromArr(inp) {
     console.log(array);
     var index = array.indexOf(inp);
@@ -703,8 +703,9 @@ function removeFromArr(inp) {
 removeFromArr(12); 
 */
 
-/* 
+
 // Napisati funkciju koja iz niza izvlaci samo brojeve i smjesta ih u drugi novi niz
+/* 
 function numbersOnly() {
     console.log(array);
     var nizBrojeva = [];
@@ -720,11 +721,11 @@ console.log(res);
 */
 
 
-
-function printMatrix() {
+//printanje matrixa
+/* function printMatrix() {
 
     for (var i = 0; i < 5; i++) {
-        for (var j = 5; j > 0; j--) {
+        for (var j = 0; j <= i; j++) {
             document.write('#');
         }
         document.write('<br>');
@@ -732,16 +733,105 @@ function printMatrix() {
 
 }
 
+//printanje matrixa
+printMatrix(); */
+/* 
+function printMatrix() {
+    for (var i = 5; i > 0; i--) {
+        for (var j = 0; j < i; j++) {
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+
+}
+
 printMatrix();
+ */
 
 
+//algoritam za trazenje najvece rijeci u stringu
+/* var str = 'Web Development Tutorial for Begginers';
+function maxWord(text) {
+    var words = text.split(' ');
+    var start = words[0];
+    for (var i = 0; i < words.length; i++) {
+        if (words[i].length > start.length) {
+            start = words[i];
+        }
+    }            
+    return start;
+}            
 
 
+console.log(maxWord(str));
+ */
 
 
+//bubble sort niza
+/* 
+var arr = [12, 3, 45, 6, 7, 32, 17, 9, 105, 99, 27, 166, 21, 81, 23, 24];
 
+function bubbleSort(niz) {
+    for (var i = 0; i < niz.length; i++) {
+        for (var j = 0; j < niz.length; j++) {
+            if (niz[j] > niz[j + 1]) {
 
+                var temp = niz[j];
+                niz[j]=niz[j+1];
+                niz[j+1] = temp;
 
+            }
+        }
+    }
+
+    return niz;
+}
+document.write('Array: ' + arr.sort());
+document.write('<br>')
+document.write('Bubble Sort: ' + bubbleSort(arr));
+ */
+
+/* function clicked(){
+    console.log('You clicked on div');
+}
+ */
+
+/* 
+function copyDiv(evt) {
+    var original = document.getElementsByTagName('div');
+    original[1].innerHTML = original[0].innerHTML;
+    original[0].innerHTML = 'Uspjesno prebaceno';
+    console.log('Kliknuo si na div');
+    console.log(evt);
+
+} */
+
+var div = document.createElement('div');
+div.style.cssText = 'height: 400px; width: 800px; border: 7px solid black; margin: 100px auto;'
+var mousedown = false;
+
+div.onmousedown = function () {
+    console.log('Aktiviran klik');
+    mousedown = true;
+}
+
+div.onmouseup = function () {
+    console.log('Pusten klik');
+    mousedown = false;
+}
+
+div.onmousemove = function (event) {
+    if(!mousedown) return;
+    var point = document.createElement('div');
+    point.style.cssText = 'width: 5px; height: 5px; background: red; position: absolute;';
+    point.style.top = event.clientY+'px';
+    point.style.left = event.clientX+'px';
+    div.appendChild(point);
+    console.log('Aktiviran pokret misa', event);
+}
+
+document.body.appendChild(div);
 
 
 
@@ -752,3 +842,4 @@ printMatrix();
 
 
 //overapi.com
+//sorting.at
