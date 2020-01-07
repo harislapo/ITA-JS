@@ -843,30 +843,31 @@ function checkInput(evt) {
 }
  */
 
-var sites = {
-    Google = 'https://www.google.com',
-    Yahoo = 'https://www.yahoo.com',
-    Bing = 'https://www.bing.com'
+var arr = [
+    'https://picsum.photos/200/300', 'https://picsum.photos/200/300',
+    'https://picsum.photos/200/300', 'https://picsum.photos/200/300',
+    'https://picsum.photos/200/300', 'https://picsum.photos/200/300',
+    'https://picsum.photos/200/300', 'https://picsum.photos/200/300'
+    ];
+
+var image = document.getElementById('image');
+var index = 0;
+displayImage(index);
+
+function backImg() {
+    displayImage(index);
+    index--;
 }
 
-var div1 = document.createElement('div');
-div1.innerHTML = 'SET MENU';
-document.body.appendChild(div1);
-
-var div2 = document.createElement('div');
-document.body.appendChild(div2);
-
-div1.onclick = function() {
-    for (var key in sites) {
-        console.log(key);
-    }
+function nextImg() {
+    displayImage(index);
+    index++
 }
 
-
-
-
-
-
+function displayImage(i) {
+    index = arr[i] ? i:0;
+    image.src = arr[i];   
+}
 
 
 
