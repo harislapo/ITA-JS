@@ -807,7 +807,7 @@ function copyDiv(evt) {
 
 } */
 
-var div = document.createElement('div');
+/* var div = document.createElement('div');
 div.style.cssText = 'height: 400px; width: 800px; border: 7px solid black; margin: 100px auto;'
 var mousedown = false;
 
@@ -832,6 +832,38 @@ div.onmousemove = function (event) {
 }
 
 document.body.appendChild(div);
+ */
+/* 
+function checkInput(evt) {
+    var unos = evt.target.value;
+    evt.target.style.cssText = 'border-bottom: 1px solid black;';
+    if (isNaN(unos)) {
+        evt.target.style.cssText = 'border-bottom: 3px solid red;';
+    }
+}
+ */
+
+var sites = {
+    Google = 'https://www.google.com',
+    Yahoo = 'https://www.yahoo.com',
+    Bing = 'https://www.bing.com'
+}
+
+var div1 = document.createElement('div');
+div1.innerHTML = 'SET MENU';
+document.body.appendChild(div1);
+
+var div2 = document.createElement('div');
+document.body.appendChild(div2);
+
+div1.onclick = function() {
+    for (var key in sites) {
+        console.log(key);
+    }
+}
+
+
+
 
 
 
